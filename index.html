@@ -16,7 +16,9 @@ body, html {
 .hero {
   background-image: url('img/Veronica.jpeg');
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 50%; /* ajuste vertical para rosto visível */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -45,7 +47,7 @@ body, html {
 }
 .hero-content {
   position: absolute;
-  top:50%;
+  top:55%; /* ligeiramente mais abaixo para não cobrir o rosto */
   left:50%;
   transform: translate(-50%, -50%);
   z-index: 4;
