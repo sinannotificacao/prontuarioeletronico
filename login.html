@@ -8,13 +8,12 @@
 </head>
 <body>
 <div class="container">
-    <h1>Login Profissional</h1>
-    <input type="text" id="reg-num" placeholder="Digite seu número de registro">
-    <button onclick="buscarProfissional()">Verificar</button>
-    <div id="prof-info"></div>
-    <button id="enter-btn" onclick="entrar()" style="display:none;">Entrar</button>
+<h1>Login Profissional</h1>
+<input type="text" id="reg-num" placeholder="Digite seu número de registro">
+<button onclick="buscarProfissional()">Verificar</button>
+<div id="prof-info"></div>
+<button id="enter-btn" onclick="entrar()" style="display:none;">Entrar</button>
 </div>
-
 <script>
 const profissionais = [
   { reg: '12345', nome: 'Dr. Ana Souza', especialidade: 'Cardiologia' },
@@ -23,7 +22,6 @@ const profissionais = [
   { reg: '45678', nome: 'Dr. Diego Torres', especialidade: 'Ortopedia' },
   { reg: '56789', nome: 'Dra. Elisa Santos', especialidade: 'Ginecologia' }
 ];
-
 function buscarProfissional() {
   const reg = document.getElementById('reg-num').value.trim();
   const prof = profissionais.find(p => p.reg === reg);
@@ -39,10 +37,7 @@ function buscarProfissional() {
     enterBtn.style.display = 'none';
   }
 }
-
-function entrar(){
-  window.location.href = 'dashboard.html';
-}
+function entrar(){ window.location.href='dashboard.html'; }
 </script>
 </body>
 </html>
