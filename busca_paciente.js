@@ -40,13 +40,19 @@ buscarForm.addEventListener('submit', (e) => {
       encontrados.forEach(p => {
         const div = document.createElement('div');
         div.classList.add('paciente');
-        div.innerHTML = `<strong>${p.nome}</strong> - Nascimento: ${p.nascimento} - CPF: ${p.cpf} - Telefone: ${p.telefone}`;
+        div.innerHTML = `<strong>${p.nome}</strong> - Nascimento: ${p.nascimento} - CPF: ${p.cpf} - Telefone: ${p.telefone} - Endereço: ${p.endereco || ''} 
+          <button onclick="atenderPaciente('${p.id}', '${p.nome}')">Atender</button>`;
         resultadosDiv.appendChild(div);
       });
     } else {
-      cadastroDiv.style.display = 'block';
-      document.getElementById('nome').value = document.getElementById('nome-busca').value;
-      document.getElementById('nascimento').value = nascBusca;
+      const btnCadastrar = document.createElement('button');
+      btnCadastrar.textContent = 'Cadastrar Paciente';
+      btnCadastrar.onclick = () => {
+        cadastroDiv.style.display = 'block';
+        document.getElementById('nome').value = document.getElementById('nome-busca').value;
+        document.getElementById('nascimento').value = nascBusca;
+      };
+      resultadosDiv.appendChild(btnCadastrar);
     }
   });
 });
@@ -55,12 +61,25 @@ cadastroForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const nome = document.getElementById('nome').value;
   const nascimento = document.getElementById('nascimento').value;
-  const nomeMae = document.getElementById('nome-mae').value;
   const cpf = document.getElementById('cpf').value;
   const telefone = document.getElementById('telefone').value;
+  const endereco = document.getElementById('endereco').value;
 
-  pacientesRef.push({nome, nascimento, nomeMae, cpf, telefone});
+  const newRef = pacientesRef.push({nome, nascimento, cpf, telefone, endereco});
   alert('Paciente cadastrado com sucesso!');
+
   cadastroForm.reset();
   cadastroDiv.style.display = 'none';
+
+  resultadosDiv.innerHTML = '';
+  const btnAtender = document.createElement('button');
+  btnAtender.textContent = 'Atender Paciente';
+  btnAtender.onclick = () => atenderPaciente(newRef.key, nome);
+  resultadosDiv.appendChild(btnAtender);
 });
+
+function atenderPaciente(id, nome) {
+  localStorage.setItem('pacienteId', id);
+  localStorage.setItem('pacienteNome', nome);
+  window.location.href = 'paciente.html';
+}
