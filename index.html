@@ -22,51 +22,45 @@ body, html {
   width: 100%;
   height: 100vh;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(135, 206, 250, 0.2);
-  z-index: 1;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  background: rgba(135,206,250,0.2);
+  z-index:1;
 }
 
-.cloud {
+.cloud-left, .cloud-right {
   position: absolute;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  width: 200px;
-  height: 100px;
-  top: 10%;
-  animation: floatCloud 60s linear infinite;
-  z-index: 2;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.9);
+  z-index: 3;
+  transition: all 2s ease-in-out;
 }
 
-.cloud:nth-child(2) { top: 30%; width: 250px; height: 120px; animation-duration: 80s; }
-.cloud:nth-child(3) { top: 60%; width: 180px; height: 90px; animation-duration: 100s; }
-
-@keyframes floatCloud {
-  0% { left: -250px; }
-  100% { left: 100%; }
-}
+.cloud-left { left:0; }
+.cloud-right { right:0; }
 
 .hero-content {
-  position: relative;
-  z-index: 3;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index:2;
   text-align: center;
-  max-width: 600px;
-  color: #ffffff;
+  opacity: 0;
+  transition: opacity 1s ease-in-out 2s;
 }
 
 .hero-content h1 {
   font-size: 2.8rem;
   margin-bottom: 20px;
+  color: #fff;
   text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
 }
 
@@ -76,7 +70,6 @@ body, html {
   background: rgba(173, 216, 230, 0.6);
   border-radius: 15px;
   display: inline-block;
-  text-shadow: none;
   margin-bottom: 20px;
 }
 
@@ -91,14 +84,12 @@ body, html {
   transition: .3s ease;
 }
 
-.hero-content .btn:hover {
-  background: #004a99;
-}
+.hero-content .btn:hover { background: #004a99; }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .hero-content h1 { font-size: 2rem; }
   .hero-content .welcome { font-size: 1.2rem; padding: 10px 15px; }
-  .hero-content .btn { width: 100%; }
+  .hero-content .btn { width:100%; }
 }
 </style>
 </head>
@@ -106,15 +97,24 @@ body, html {
 <body>
 <div class="hero">
   <div class="overlay"></div>
-  <div class="cloud"></div>
-  <div class="cloud"></div>
-  <div class="cloud"></div>
+  <div class="cloud-left"></div>
+  <div class="cloud-right"></div>
 
-  <div class="hero-content">
-    <h1>Prontuário Eletrônico para Atendimento Profissional</h1>
+  <div class="hero-content" id="hero-content">
+    <h1>Prontuário Eletrônico</h1>
     <div class="welcome">Seja bem-vinda, Dra. Veronica!</div>
     <button class="btn" onclick="window.location.href='login.html'">Começar Agora</button>
   </div>
 </div>
+
+<script>
+window.addEventListener('load', () => {
+  document.querySelector('.cloud-left').style.transform = 'translateX(-100%)';
+  document.querySelector('.cloud-right').style.transform = 'translateX(100%)';
+  setTimeout(() => {
+    document.getElementById('hero-content').style.opacity = 1;
+  }, 2000);
+});
+</script>
 </body>
 </html>
