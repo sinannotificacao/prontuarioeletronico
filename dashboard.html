@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - Prontuário Eletrônico</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dashboard</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f0f4f8; }
+.container { max-width: 800px; margin: 50px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; }
+h1 { color: #333; }
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>Dashboard - Pacientes</h1>
-    <button onclick="window.location.href='busca_paciente.html'">Buscar/Cadastrar Paciente</button>
-  </div>
-  <script src="dashboard.js"></script>
+<div class="container">
+  <h1>Dashboard</h1>
+  <p id="user-info"></p>
+</div>
+<script>
+const nome = localStorage.getItem('profissionalNome');
+const especialidade = localStorage.getItem('profissionalEspecialidade');
+document.getElementById('user-info').textContent = `Bem-vindo(a) ${nome} - ${especialidade}`;
+</script>
 </body>
 </html>
