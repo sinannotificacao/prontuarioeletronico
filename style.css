@@ -50,7 +50,7 @@ a {
 .nav-wrapper {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 18px 24px;
+  padding: 12px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -98,11 +98,11 @@ a {
   min-height: 100vh;
   background-image: url('img/Veronica.jpeg');
   background-size: cover;
-  background-position: right center;
+  background-position: right 18%;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  padding: 120px 24px 60px;
+  padding: 150px 24px 60px;
 }
 
 .overlay {
@@ -111,7 +111,7 @@ a {
   background:
     linear-gradient(
       to right,
-      rgba(58, 23, 37, 0.82) 0%,
+      rgba(58, 23, 37, 0.78) 0%,
       rgba(58, 23, 37, 0.55) 35%,
       rgba(58, 23, 37, 0.18) 70%,
       rgba(58, 23, 37, 0.06) 100%
