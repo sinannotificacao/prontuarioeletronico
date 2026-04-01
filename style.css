@@ -98,7 +98,7 @@ a {
   min-height: 100vh;
   background-image: url('img/Veronica.jpeg');
   background-size: cover;
-  background-position: center 40%;
+  background-position: right center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -109,8 +109,13 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(58, 23, 37, 0.76), rgba(58, 23, 37, 0.28)),
-    linear-gradient(to top, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.22));
+    linear-gradient(
+      to right,
+      rgba(58, 23, 37, 0.82) 0%,
+      rgba(58, 23, 37, 0.55) 35%,
+      rgba(58, 23, 37, 0.18) 70%,
+      rgba(58, 23, 37, 0.06) 100%
+    );
 }
 
 .hero-content {
@@ -412,3 +417,5 @@ textarea {
     display: none;
   }
 }
+
+.hero-content { max-width: 560px; }
