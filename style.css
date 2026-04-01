@@ -419,3 +419,184 @@ textarea {
 }
 
 .hero-content { max-width: 560px; }
+
+
+/* Mobile refinements */
+@media (max-width: 768px) {
+  .nav-wrapper {
+    padding: 14px 16px;
+    gap: 10px;
+  }
+
+  .brand,
+  .brand.dark {
+    font-size: 0.92rem;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .navbar nav {
+    width: 100%;
+    justify-content: center;
+    gap: 10px 14px;
+  }
+
+  .navbar nav a {
+    font-size: 0.92rem;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 128px 18px 36px;
+    background-position: 76% center;
+    align-items: center;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(58, 23, 37, 0.70) 0%,
+        rgba(58, 23, 37, 0.56) 42%,
+        rgba(58, 23, 37, 0.34) 100%
+      );
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .tag {
+    font-size: 0.78rem;
+    padding: 8px 14px;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.12;
+    margin-bottom: 14px;
+  }
+
+  .hero p {
+    font-size: 0.98rem;
+    line-height: 1.55;
+    max-width: 100%;
+    margin-bottom: 22px;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 18px;
+  }
+
+  .section {
+    padding: 56px 16px;
+  }
+
+  .page-shell {
+    padding-top: 82px;
+  }
+
+  .page-hero {
+    padding-bottom: 10px;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .section h2,
+  .page-hero h1 {
+    font-size: 1.75rem;
+    line-height: 1.18;
+  }
+
+  .section p,
+  .page-hero p,
+  .card p,
+  .soft-card p {
+    font-size: 0.96rem;
+  }
+
+  .card,
+  .soft-card {
+    padding: 22px 18px;
+    border-radius: 20px;
+  }
+
+  .highlight-box {
+    padding: 24px 18px;
+    border-radius: 24px;
+  }
+
+  form {
+    gap: 12px;
+  }
+
+  input,
+  textarea {
+    font-size: 16px;
+    padding: 14px 14px;
+    border-radius: 14px;
+  }
+
+  .btn,
+  button {
+    min-height: 50px;
+  }
+
+  .whatsapp-float {
+    right: 12px;
+    bottom: 12px;
+    padding: 12px 14px;
+    border-radius: 999px;
+  }
+
+  .wa-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .wa-text {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    padding-top: 122px;
+    background-position: 80% center;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.93rem;
+  }
+
+  .navbar nav a {
+    font-size: 0.88rem;
+  }
+
+  .section h2,
+  .page-hero h1 {
+    font-size: 1.55rem;
+  }
+
+  .tag,
+  .mini-tag {
+    font-size: 0.74rem;
+  }
+}
