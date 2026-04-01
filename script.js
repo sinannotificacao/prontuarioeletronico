@@ -1,20 +1,16 @@
-const firebaseConfig = {
-  apiKey: "SUA_API_KEY",
-  authDomain: "SEU_PROJETO.firebaseapp.com",
-  databaseURL: "https://SEU_PROJETO-default-rtdb.firebaseio.com",
-  projectId: "SEU_PROJETO",
-  storageBucket: "SEU_PROJETO.appspot.com",
-  messagingSenderId: "SEU_MESSAGING_SENDER_ID",
-  appId: "SEU_APP_ID"
-};
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.site-nav');
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
+if (toggle && nav) {
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
 
-const form = document.getElementById('login-form');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const profissional = document.getElementById('profissional').value;
-  localStorage.setItem('profissional', profissional);
-  window.location.href = 'dashboard.html';
-});
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
