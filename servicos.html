@@ -10,7 +10,10 @@
   <header class="navbar solid">
     <div class="nav-wrapper">
       <a class="brand dark" href="index.html">Geisiany Clinic</a>
-      <nav class="dark-nav">
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" onclick="document.body.classList.toggle('menu-open'); this.setAttribute('aria-expanded', document.body.classList.contains('menu-open') ? 'true' : 'false');">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="dark-nav mobile-nav">
         <a href="index.html">Início</a>
         <a href="sobre.html">Sobre</a>
         <a href="servicos.html">Procedimentos</a>
@@ -76,5 +79,15 @@
     <span class="wa-icon">✦</span>
     <span class="wa-text">Agendar pelo WhatsApp</span>
   </a>
+
+  <script>
+    document.querySelectorAll('.mobile-nav a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.body.classList.remove('menu-open');
+        var btn = document.querySelector('.menu-toggle');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 </body>
 </html>

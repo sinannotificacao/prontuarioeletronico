@@ -600,3 +600,125 @@ textarea {
     font-size: 0.74rem;
   }
 }
+
+
+.hero-proof {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: rgba(255,255,255,0.92);
+  font-size: 0.92rem;
+  margin: 0 0 22px;
+}
+
+.testimonials-grid .card {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  color: #5d4650;
+}
+
+.btn-dark {
+  background: linear-gradient(135deg, var(--vinho), var(--rosa-quente));
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid #edd7e0;
+  background: rgba(255,255,255,0.94);
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: 0 10px 24px rgba(95, 43, 65, 0.10);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--vinho);
+  margin: 3px 0;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .nav-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-nav {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 16px;
+    right: 16px;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+    background: rgba(255, 251, 252, 0.98);
+    border: 1px solid #f1dbe4;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(95, 43, 65, 0.14);
+  }
+
+  body.menu-open .mobile-nav {
+    display: flex;
+  }
+
+  .mobile-nav a {
+    color: var(--vinho) !important;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: #fff8fb;
+  }
+
+  .mobile-nav a:hover {
+    color: var(--rosa-quente) !important;
+  }
+
+  .hero-proof {
+    justify-content: center;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    margin-bottom: 18px;
+  }
+
+  .hero-buttons .btn {
+    font-size: 0.98rem;
+  }
+
+  .cards.testimonials-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .menu-toggle {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+
+  .mobile-nav {
+    left: 12px;
+    right: 12px;
+  }
+
+  .hero-proof {
+    font-size: 0.78rem;
+  }
+}
