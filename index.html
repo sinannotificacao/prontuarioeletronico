@@ -1,30 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Veronica Clinic | Estética Avançada</title>
-  <meta name="description" content="Estética avançada com atendimento humanizado, naturalidade e sofisticação.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-shell">
-      <a href="index.html" class="brand">
-        <span class="brand-mark">V</span>
-        <span class="brand-copy">
-          <strong>Veronica Clinic</strong>
-          <small>Estética avançada</small>
-        </span>
-      </a>
-
-      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-
-      <nav class="site-nav">
-        <a href="index.html" class="active">Início</a>
+  <header class="navbar">
+    <div class="nav-wrapper">
+      <a class="brand" href="index.html">Veronica Clinic</a>
+      <nav>
+        <a href="index.html">Início</a>
         <a href="sobre.html">Sobre</a>
         <a href="servicos.html">Procedimentos</a>
         <a href="contato.html">Contato</a>
@@ -32,143 +19,101 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero hero-home">
-      <div class="hero-overlay"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy glass-panel">
-          <span class="eyebrow">Naturalidade • Elegância • Bem-estar</span>
-          <h1>Realçando sua beleza com leveza, sofisticação e cuidado.</h1>
-          <p>
-            Atendimento estético com olhar individualizado, protocolos personalizados
-            e foco em resultados harmoniosos para valorizar sua melhor versão.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="contato.html">Agendar avaliação</a>
-            <a class="btn btn-secondary" href="sobre.html">Conheça a profissional</a>
-          </div>
-        </div>
+  <section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <span class="tag">Estética Avançada • Beleza com naturalidade</span>
+      <h1>Realçando sua beleza com sofisticação, leveza e cuidado</h1>
+      <p>
+        Uma experiência pensada para valorizar sua autoestima com atendimento
+        humanizado, olhar estético refinado e protocolos personalizados.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="https://wa.me/5537996654140?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener" class="btn btn-primary">Agendar avaliação</a>
+        <a href="sobre.html" class="btn btn-secondary">Conheça a profissional</a>
       </div>
-    </section>
-
-    <section class="section intro-section">
-      <div class="container">
-        <div class="section-heading centered narrow">
-          <span class="section-tag">Experiência premium</span>
-          <h2>Um espaço pensado para autoestima, confiança e acolhimento.</h2>
-          <p>
-            Cada detalhe da experiência foi pensado para unir técnica, sensibilidade e
-            resultados naturais, respeitando a individualidade de cada paciente.
-          </p>
-        </div>
-
-        <div class="feature-grid">
-          <article class="feature-card">
-            <h3>Atendimento personalizado</h3>
-            <p>Protocolos adaptados ao seu perfil, objetivos e necessidades.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Resultados harmoniosos</h3>
-            <p>Valorização da beleza natural com elegância e equilíbrio.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Ambiente acolhedor</h3>
-            <p>Conforto, delicadeza e uma experiência mais leve do início ao fim.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt">
-      <div class="container split-layout">
-        <div>
-          <span class="section-tag">Sobre a clínica</span>
-          <h2>Estética avançada com foco em beleza autêntica.</h2>
-          <p>
-            A Veronica Clinic nasce com a proposta de entregar um atendimento elegante,
-            feminino e humanizado, combinando conhecimento técnico e cuidado genuíno.
-          </p>
-          <p>
-            A ideia é criar protocolos que respeitem seus traços, sua rotina e a imagem
-            que você deseja transmitir, sempre com naturalidade.
-          </p>
-          <a class="text-link" href="sobre.html">Ler mais sobre a abordagem</a>
-        </div>
-
-        <div class="stacked-cards">
-          <article class="soft-card">
-            <span class="soft-card-index">01</span>
-            <h3>Avaliação individual</h3>
-            <p>Entendimento do seu perfil para definir o plano ideal.</p>
-          </article>
-          <article class="soft-card">
-            <span class="soft-card-index">02</span>
-            <h3>Planejamento preciso</h3>
-            <p>Escolha de técnicas e protocolos adequados a cada objetivo.</p>
-          </article>
-          <article class="soft-card">
-            <span class="soft-card-index">03</span>
-            <h3>Beleza com naturalidade</h3>
-            <p>Resultados delicados, sofisticados e alinhados à sua identidade.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading centered narrow">
-          <span class="section-tag">Procedimentos</span>
-          <h2>Tratamentos pensados para cuidar da sua imagem e do seu bem-estar.</h2>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <h3>Estética facial</h3>
-            <p>Cuidados para revitalização, luminosidade e textura da pele.</p>
-          </article>
-          <article class="service-card">
-            <h3>Harmonização</h3>
-            <p>Valorização dos traços com leveza, proporção e equilíbrio.</p>
-          </article>
-          <article class="service-card">
-            <h3>Estética corporal</h3>
-            <p>Protocolos voltados a bem-estar, modelagem e autocuidado.</p>
-          </article>
-          <article class="service-card">
-            <h3>Rejuvenescimento</h3>
-            <p>Tratamentos que auxiliam na firmeza, viço e aparência saudável.</p>
-          </article>
-        </div>
-
-        <div class="center-action">
-          <a class="btn btn-primary" href="servicos.html">Ver todos os procedimentos</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section cta-section">
-      <div class="container cta-shell">
-        <div>
-          <span class="section-tag light">Agendamento</span>
-          <h2>Agende sua avaliação e descubra o protocolo ideal para você.</h2>
-          <p>
-            Entre em contato para tirar dúvidas, saber mais sobre os procedimentos e
-            iniciar seu atendimento.
-          </p>
-        </div>
-        <a class="btn btn-light" href="contato.html">Entrar em contato</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-shell">
-      <p>Veronica Clinic • Estética avançada</p>
-      <p>Beleza com naturalidade e sofisticação.</p>
     </div>
+  </section>
+
+  <section class="section intro">
+    <div class="section-header">
+      <span class="mini-tag">Bem-estar & autoestima</span>
+      <h2>Um atendimento elegante, acolhedor e pensado nos mínimos detalhes</h2>
+      <p>
+        Cada procedimento é conduzido com sensibilidade, técnica e naturalidade,
+        respeitando a individualidade de cada paciente e buscando resultados
+        harmoniosos.
+      </p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Atendimento Personalizado</h3>
+        <p>
+          Protocolos desenvolvidos de forma individual, considerando sua pele,
+          seus objetivos e seu momento.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Naturalidade</h3>
+        <p>
+          Resultados delicados e sofisticados, realçando seus traços sem perder
+          sua essência.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Experiência Premium</h3>
+        <p>
+          Um ambiente acolhedor, feminino e confortável para que você se sinta
+          bem do início ao fim.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section highlight">
+    <div class="highlight-box">
+      <div>
+        <span class="mini-tag">Procedimentos</span>
+        <h2>Cuidados que unem estética, confiança e bem-estar</h2>
+        <p>
+          Conheça os tratamentos disponíveis e descubra a abordagem ideal para a
+          sua melhor versão.
+        </p>
+      </div>
+      <a href="servicos.html" class="btn btn-primary">Ver procedimentos</a>
+    </div>
+  </section>
+
+  <section class="section contact-cta">
+    <div class="section-header">
+      <span class="mini-tag">Agendamento</span>
+      <h2>Pronta para agendar sua avaliação?</h2>
+      <p>
+        Clique no botão abaixo e fale diretamente pelo WhatsApp.
+      </p>
+      <a href="https://wa.me/5537996654140?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener" class="btn btn-primary">Falar no WhatsApp</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Veronica Clinic • Estética Avançada</p>
   </footer>
 
-  <script src="script.js"></script>
+  <a
+    href="https://wa.me/5537996654140?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Falar no WhatsApp"
+    title="Falar no WhatsApp"
+  >
+    <span class="wa-icon">✦</span>
+    <span class="wa-text">Agendar pelo WhatsApp</span>
+  </a>
 </body>
 </html>
